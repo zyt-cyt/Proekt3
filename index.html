@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Interactive Guide</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+<div class="box">
+
+<header class="header">
+<nav>
+<div class="bl1">
+<img src="img/Group 82.png" alt="Logo">
+</div>
+
+<div class="bl2">
+  <a class="q1" href="#syntax">Syntax</a>
+  <a class="q1" href="#animations">Animations</a>
+  <a class="q1" href="#accordion">Accordion</a>
+  <a class="q1" href="https://www.w3schools.com/jquery/" target="_blank">Learn jQuery Examples</a>
+  <a class="q1" href="https://api.jquery.com/" target="_blank">jQuery Docs</a>
+</div>
+
+
+<div class="bl3">
+<div class="krug"></div>
+<span class="krug-text">Click to activate interactive mode</span>
+</div>
+
+<img class="chel" src="img/Group 81.png" alt="Illustration">
+</nav>
+
+<section class="block1">
+<h1 class="e1">jQuery makes JavaScript easier</h1>
+<h2 class="e2">Fast, simple and powerful</h2>
+<p class="e3">
+jQuery is a lightweight JavaScript library that simplifies DOM manipulation,
+event handling and animations. It allows developers to write less code
+and achieve more results.
+</p>
+
+<div class="btn">
+    <button class="but1">Get Started</button>
+    <button class="but2">Documentation</button>
+</div>
+
+<!-- Информационные блоки -->
+<div class="info-box but1-info">
+    <p>Welcome! Start your journey with our library. Quick setup and easy integration.</p>
+</div>
+
+<div class="info-box but2-info">
+    <p>Check out the full documentation to understand all features and examples.</p>
+</div>
+
+</section>
+
+<section class="block2">
+    <div class="box2">
+        <a href="https://teamtreehouse.com/community/string-manipulation-code-challenge" target="_blank">
+            <h6>Manipulation</h6>
+        </a>
+    </div>
+    <div class="box2">
+        <a href="https://www.w3schools.com/jquery/jquery_animate.asp" target="_blank">
+            <h6>Animations</h6>
+        </a>
+    </div>
+    <div class="box2">
+        <a href="https://www.w3schools.com/js/js_events.asp" target="_blank">
+            <h6>Events</h6>
+        </a>
+    </div>
+    <div class="box2">
+        <a href="https://www.w3schools.com/js/js_ajax_intro.asp" target="_blank">
+            <h6>AJAX</h6>
+        </a>
+    </div>
+    <div class="box2">
+        <a href="https://api.jquery.com/category/effects/" target="_blank">
+            <h6>Effects</h6>
+        </a>
+    </div>
+    <div class="box2">
+        <a href="https://plugins.jquery.com/" target="_blank">
+            <h6>Plugins</h6>
+        </a>
+    </div>
+</section>
+
+</header>
+
+<section id="syntax" class="section1">
+<h1><span>jQuery</span> Syntax</h1>
+
+<div class="boox">
+<div class="box3">
+<p class="ppp1">
+<span class="span1">$</span>
+<span class="span2">(selector)</span>
+<span class="span3">.action()</span>
+</p>
+</div>
+
+<div class="box4">
+<p class="h11">
+Click on any part of the syntax to understand how it works.
+</p>
+</div>
+</div>
+</section>
+
+<section id="animations" class="section2">
+<h1><span>Standard Animation</span> Methods</h1>
+
+<div class="boox2">
+<div class="box5">
+<p class="ppp2">
+jQuery provides simple animation methods that allow you to show, hide
+and animate elements smoothly without complex CSS or JavaScript.
+</p>
+
+<p class="method-info">
+Choose a method below to see it in action.
+</p>
+
+<div class="box7">
+<div id="boxi1">hide()</div>
+<div id="boxi2">show()</div>
+<div id="boxi3">toggle()</div>
+<div id="boxi4">slideDown()</div>
+<div id="boxi5">slideUp()</div>
+<div id="boxi6">slideToggle()</div>
+<div id="boxi7">fadeIn()</div>
+<div id="boxi8">fadeOut()</div>
+<div id="boxi9">fadeToggle()</div>
+</div>
+</div>
+
+<div class="box6">
+<img class="ii1" src="img/HD-wallpaper-vector-landscape-vector-nature 1.png" alt="Demo image">
+</div>
+</div>
+</section>
+
+<section id="accordion" class="section5">
+<h1><span>jQuery</span> Accordion</h1>
+
+<div class="accordion">
+
+<div class="accordion-item">
+<button class="accordion-header">
+Why developers use jQuery?
+<span class="icon">+</span>
+</button>
+<div class="accordion-content">
+<p>
+jQuery simplifies JavaScript development by reducing code complexity
+and improving readability.
+</p>
+</div>
+</div>
+
+<div class="accordion-item">
+<button class="accordion-header">
+What is easier with jQuery?
+<span class="icon">+</span>
+</button>
+<div class="accordion-content">
+<p>
+Animations, AJAX requests and interactive UI elements can be implemented
+faster using jQuery.
+</p>
+</div>
+</div>
+
+<div class="accordion-item">
+<button class="accordion-header">
+When to use pure JavaScript?
+<span class="icon">+</span>
+</button>
+<div class="accordion-content">
+<ul>
+<li>Large-scale applications</li>
+<li>Modern frameworks</li>
+<li>Performance-critical logic</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+</div>
+
+<script>
+$(function () {
+
+$('.bl3').on('click', function () {
+    $('body').toggleClass('dark');
+});
+
+
+function changeText(text) {
+$('.h11').fadeOut(150, function () {
+$(this).text(text).fadeIn(150);
+});
+}
+
+$('.span1').click(() => changeText('The $ symbol represents the jQuery function.'));
+$('.span2').click(() => changeText('Selector finds elements in the DOM.'));
+$('.span3').click(() => changeText('Action performs an operation on elements.'));
+
+const img = $('.ii1');
+const info = $('.method-info');
+
+$('#boxi1').click(() => { info.text('hide() hides the element'); img.hide(500); });
+$('#boxi2').click(() => { info.text('show() displays the element'); img.show(500); });
+$('#boxi3').click(() => { info.text('toggle() switches visibility'); img.toggle(500); });
+$('#boxi4').click(() => { info.text('slideDown() reveals element'); img.slideDown(500); });
+$('#boxi5').click(() => { info.text('slideUp() hides element'); img.slideUp(500); });
+$('#boxi6').click(() => { info.text('slideToggle() toggles slide'); img.slideToggle(500); });
+$('#boxi7').click(() => { info.text('fadeIn() fades in'); img.fadeIn(500); });
+$('#boxi8').click(() => { info.text('fadeOut() fades out'); img.fadeOut(500); });
+$('#boxi9').click(() => { info.text('fadeToggle() toggles fade'); img.fadeToggle(500); });
+
+$('.accordion-header').click(function () {
+const item = $(this).parent();
+const content = item.find('.accordion-content');
+
+$('.accordion-item').not(item)
+.removeClass('active')
+.find('.accordion-content')
+.css('max-height', 0);
+
+item.toggleClass('active');
+
+if (item.hasClass('active')) {
+content.css('max-height', content.prop('scrollHeight') + 'px');
+} else {
+content.css('max-height', 0);
+}
+});
+
+});
+$(document).ready(function() {
+    $('.but1').click(function() {
+        $('.but1-info').slideToggle(300); // плавно показываем или скрываем
+    });
+    
+    $('.but2').click(function() {
+        $('.but2-info').slideToggle(300);
+    });
+});
+
+</script>
+
+</body>
+</html>
